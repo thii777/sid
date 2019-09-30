@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Sneakers } from './styles';
 
 export default function Home() {
     return (
         <Container>
-            <h1 />;
+            <Sneakers to="/sneakers">
+                <h1>Tenis</h1>
+            </Sneakers>
         </Container>
     );
 }

@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export default function Cart() {
+export default function Help() {
     return (
         <Container>
-            <h1>Carrinho</h1>
+            <h1> Ajuda</h1>
         </Container>
     );
 }

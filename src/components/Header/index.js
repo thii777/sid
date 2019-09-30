@@ -2,23 +2,32 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { MdShoppingBasket } from 'react-icons/md';
+import { MdSearch, MdPerson } from 'react-icons/md';
 
-import { Container, Cart } from './styles';
+import { Container, Cart, Sac, Attendance, Help } from './styles';
 import logo from '../../assets/logo.png';
 
 export default function Header() {
     return (
         <Container>
+            <Sac>
+                <Attendance to="/attendance">
+                    <strong>atendimento &nbsp; -</strong>
+                </Attendance>
+                <Help to="/help">
+                    <strong> &nbsp; ajuda</strong>
+                </Help>
+            </Sac>
             <Link to="/">
                 <img src={logo} alt="Sidsurf" />
             </Link>
             <Cart to="/cart">
+                <MdSearch size={25} color="#000" />
+                <MdPerson size={25} color="#000" />
                 <div>
-                    <strong>Meu carrinho</strong>
-                    <span>3 itens</span>
+                    <strong>carrinho &nbsp; - &nbsp; </strong>
+                    <strong>0&nbsp;itens</strong>
                 </div>
-                <MdShoppingBasket size={36} color="FFF" />
             </Cart>
         </Container>
     );

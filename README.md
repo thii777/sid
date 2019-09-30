@@ -19,6 +19,7 @@ Front end of the project created from scratch to insert a physical store in the 
  * The pages folder contains the pages and styles of our application.
  * The header cart icon was imported from the <br/>
  material designer library.
+ * Header organization, new icons and creation of new pages and routes
 
 
  #### Technologies used

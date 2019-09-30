@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
   * {
     margin: 0;
@@ -11,8 +12,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #171616;
     -webkit-font-smoothing: antialiased;
+    font-family: Montserrat, sans-serif;
   }
 
   body, input, button {
@@ -20,7 +21,6 @@ export default createGlobalStyle`
   }
 
   #root {
-      max-width: 1020px;
       margin: 0 auto;
       padding: 0 20px 50px;
   }
