@@ -1,14 +1,24 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+// Header
+
 export const Container = styled.header`
+    height: 140px;
+`;
+
+// Menu
+
+export const Menu = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
     letter-spacing: 3px;
+    padding: 0 55px 0 55px;
 
     img {
-        margin-top: 40px;
+        margin-top: 30px;
+        padding-left: 50px;
     }
 `;
 
@@ -20,7 +30,7 @@ export const Sac = styled.div`
 export const Attendance = styled(Link)`
     text-decoration: none;
     color: #000;
-    font-size: 10px;
+    font-size: 11px;
     transition: opacity 0.2s;
 
     &:hover {
@@ -32,7 +42,7 @@ export const Attendance = styled(Link)`
 export const Help = styled(Link)`
     text-decoration: none;
     color: #000;
-    font-size: 10px;
+    font-size: 11px;
     transition: opacity 0.2s;
 
     &:hover {
@@ -50,18 +60,40 @@ export const Cart = styled(Link)`
     div {
         transition: opacity 0.2s;
         color: #000;
-        margin-left: 10px;
+        margin-left: 11px;
 
         &:hover {
             opacity: 0.7;
             color: green;
         }
-        strong {
-            font-size: 10px;
-        }
 
         span {
-            font-size: 10px;
+            font-size: 11px;
         }
+    }
+`;
+
+// Navbar
+
+export const NavBar = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 3px;
+    list-style: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 40px 25px 0 25px;
+`;
+
+// Article
+
+export const Shoes = styled(Link)`
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+
+    &:hover {
+        color: blue;
     }
 `;

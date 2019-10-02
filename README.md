@@ -13,14 +13,26 @@ Front end of the project created from scratch to insert a physical store in the 
 
  #### Header creation
 
- * I created the routes.js file in the project src folder to handle the application routes.
- * in the styles folder I created the global.js <br/>
+ * Created the routes.js file in the project src folder to handle the application routes.
+ * In the styles folder I created the global.js <br/>
  file to define the global application styles.
  * The pages folder contains the pages and styles of our application.
  * The header cart icon was imported from the <br/>
  material designer library.
  * Header organization, new icons and creation of new pages and routes
 
+ #### NavBar
+
+ * navbar creation where will be shortcuts to the most accessed sessions
+
+ #### Banner
+
+ * Banner creation
+ * Why buy on the site (4 advantages with icons)
+
+ #### Session Shoes
+
+ * Route Creation for Shoe Purchase Session
 
  #### Technologies used
 

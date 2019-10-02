@@ -2,10 +2,10 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Attendance from './components/Header/Attendance';
-import Help from './components/Header/Help';
+import Attendance from './pages/Attendance';
+import Help from './pages/Help';
 import Cart from './pages/Cart';
-import Sneakers from './pages/Sneakers';
+import Shoes from './pages/Home/Shoes';
 
 export default function Routes() {
     return (
@@ -13,8 +13,8 @@ export default function Routes() {
             <Route path="/" exact component={Home} />
             <Route path="/attendance" component={Attendance} />
             <Route path="/help" component={Help} />
-            <Route path="/sneakers" component={Sneakers} />
             <Route path="/cart" component={Cart} />
+            <Route path="/shoes" component={Shoes} />
         </Switch>
     );
 }
