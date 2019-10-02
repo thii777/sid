@@ -13,7 +13,8 @@ Front end of the project created from scratch to insert a physical store in the 
 
  #### Header creation
 
- * Created the routes.js file in the project src folder to handle the application routes.
+ * Created the routes.js file in the project src folder to handle <br/>
+   the application routes.
  * In the styles folder I created the global.js <br/>
  file to define the global application styles.
  * The pages folder contains the pages and styles of our application.
@@ -33,6 +34,14 @@ Front end of the project created from scratch to insert a physical store in the 
  #### Session Shoes
 
  * Route Creation for Shoe Purchase Session
+ * Shoes style
+ * This code session has been replicated to all other navbar
+
+ #### Session Cart
+
+ * Cart style
+ * In this application the polished library was used to <br />
+   darken the button when passing the mouser
 
  #### Technologies used
 
@@ -40,6 +49,7 @@ Front end of the project created from scratch to insert a physical store in the 
  - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
  - [styled-components](https://www.styled-components.com/)
  - [react-icons](https://www.styled-components.com)
+ - [polished](https://www.npmjs.com/package/polished)
 
 ## License
 
