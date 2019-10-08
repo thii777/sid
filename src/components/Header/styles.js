@@ -97,3 +97,43 @@ export const Shoes = styled(Link)`
         color: blue;
     }
 `;
+
+export const Tshirt = styled(Link)`
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+
+    &:hover {
+        color: blue;
+    }
+`;
+
+export const Short = styled(Link)`
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+
+    &:hover {
+        color: blue;
+    }
+`;
+
+export const Hat = styled(Link)`
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+
+    &:hover {
+        color: blue;
+    }
+`;
+
+export const Clock = styled(Link)`
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+
+    &:hover {
+        color: blue;
+    }
+`;

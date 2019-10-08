@@ -13,6 +13,10 @@ import {
     Attendance,
     Help,
     Shoes,
+    Tshirt,
+    Short,
+    Hat,
+    Clock,
 } from './styles';
 
 import logo from '../../assets/logo.png';
@@ -45,10 +49,18 @@ export default function Header() {
                 <Shoes to="/shoes">
                     <li>Tenis</li>
                 </Shoes>
-                <li>Camisetas</li>
-                <li>Bermudas</li>
-                <li>Bones</li>
-                <li>Relogios</li>
+                <Tshirt to="/t-shirt">
+                    <li>Camisetas</li>
+                </Tshirt>
+                <Short to="/short">
+                    <li>Shorts</li>
+                </Short>
+                <Hat to="/hat">
+                    <li>Bones</li>
+                </Hat>
+                <Clock to="/clock">
+                    <li>Relogios</li>
+                </Clock>
                 <li>Cuecas e meias</li>
                 <li>Acessorios</li>
                 <li>

@@ -2,16 +2,48 @@ import React from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
 import { ProductList } from './styles';
-import newbalance from '../../../assets/newbalance.jpg';
-import oakley from '../../../assets/oakley-halftrack.jpg';
-import ous from '../../../assets/ous.jpg';
+import nike from '../../../assets/shirt-nike-black.jpg';
+import oakley from '../../../assets/shirt-oakley-grey.jpg';
 
-export default function Shoes() {
+export default function Shorts() {
     return (
         <ProductList>
             <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
+                <img src={nike} alt="Tenis" />
+                <strong>Nike</strong>
+                <span>R$ 299,90</span>
+                <button type="button">
+                    <div>
+                        <MdAddShoppingCart size={16} color="#fff" /> 3
+                    </div>
+                    <span>adicionar ao carrinho</span>
+                </button>
+            </li>
+            <li>
+                <img src={nike} alt="Tenis" />
+                <strong>Nike</strong>
+                <span>R$ 299,90</span>
+                <button type="button">
+                    <div>
+                        <MdAddShoppingCart size={16} color="#fff" /> 3
+                    </div>
+                    <span>adicionar ao carrinho</span>
+                </button>
+            </li>
+            <li>
+                <img src={nike} alt="Tenis" />
+                <strong>Nike</strong>
+                <span>R$ 299,90</span>
+                <button type="button">
+                    <div>
+                        <MdAddShoppingCart size={16} color="#fff" /> 3
+                    </div>
+                    <span>adicionar ao carrinho</span>
+                </button>
+            </li>
+            <li>
+                <img src={nike} alt="Tenis" />
+                <strong>Nike</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -54,8 +86,8 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={ous} alt="Tenis" />
-                <strong>Ous</strong>
+                <img src={oakley} alt="Tenis" />
+                <strong>Oakley</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -65,8 +97,8 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={ous} alt="Tenis" />
-                <strong>Ous</strong>
+                <img src={nike} alt="Tenis" />
+                <strong>Nike</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -76,8 +108,8 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={ous} alt="Tenis" />
-                <strong>Ous</strong>
+                <img src={nike} alt="Tenis" />
+                <strong>Nike</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -87,8 +119,8 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={ous} alt="Tenis" />
-                <strong>Ous</strong>
+                <img src={nike} alt="Tenis" />
+                <strong>Nike</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -98,41 +130,8 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={newbalance} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={newbalance} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={newbalance} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={newbalance} alt="Tenis" />
-                <strong>New Balance 500</strong>
+                <img src={nike} alt="Tenis" />
+                <strong>Nike</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>

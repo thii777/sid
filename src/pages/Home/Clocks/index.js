@@ -2,16 +2,15 @@ import React from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
 import { ProductList } from './styles';
-import newbalance from '../../../assets/newbalance.jpg';
-import oakley from '../../../assets/oakley-halftrack.jpg';
-import ous from '../../../assets/ous.jpg';
+import casio from '../../../assets/clock-casio.jpg';
+import ripcurl from '../../../assets/clock-ripcurl.jpg';
 
-export default function Shoes() {
+export default function Hats() {
     return (
         <ProductList>
             <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -21,8 +20,8 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -32,8 +31,8 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -43,8 +42,8 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -54,7 +53,7 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={ous} alt="Tenis" />
+                <img src={ripcurl} alt="Tenis" />
                 <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -65,7 +64,7 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={ous} alt="Tenis" />
+                <img src={ripcurl} alt="Tenis" />
                 <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -76,7 +75,7 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={ous} alt="Tenis" />
+                <img src={ripcurl} alt="Tenis" />
                 <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -87,7 +86,7 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={ous} alt="Tenis" />
+                <img src={ripcurl} alt="Tenis" />
                 <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -98,7 +97,7 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={newbalance} alt="Tenis" />
+                <img src={casio} alt="Tenis" />
                 <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -109,7 +108,7 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={newbalance} alt="Tenis" />
+                <img src={casio} alt="Tenis" />
                 <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -120,7 +119,7 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={newbalance} alt="Tenis" />
+                <img src={casio} alt="Tenis" />
                 <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -131,7 +130,7 @@ export default function Shoes() {
                 </button>
             </li>
             <li>
-                <img src={newbalance} alt="Tenis" />
+                <img src={casio} alt="Tenis" />
                 <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
