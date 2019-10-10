@@ -14,40 +14,36 @@ export const Menu = styled.header`
     justify-content: space-between;
     align-items: center;
     letter-spacing: 3px;
-    padding: 0 55px 0 55px;
-
-    img {
-        margin-top: 30px;
-        padding-left: 50px;
-    }
+    padding: 25px 55px 0 55px;
 `;
 
-export const Sac = styled.div`
-    display: flex;
-    text-transform: uppercase;
-`;
+export const TaskInput = styled.div`
+    div {
+        height: 40px;
+        width: 600px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
 
-export const Attendance = styled(Link)`
-    text-decoration: none;
-    color: #000;
-    font-size: 11px;
-    transition: opacity 0.2s;
-
-    &:hover {
-        opacity: 0.7;
-        color: blue;
-    }
-`;
-
-export const Help = styled(Link)`
-    text-decoration: none;
-    color: #000;
-    font-size: 11px;
-    transition: opacity 0.2s;
-
-    &:hover {
-        opacity: 0.7;
-        color: red;
+        input {
+            padding-left: 20px;
+            border: none;
+            width: 550px;
+            height: 38px;
+            border-radius: 8px 0 0 8px;
+            ::placeholder {
+                color: #999;
+            }
+        }
+        button {
+            padding-left: 10px;
+            height: 38px;
+            width: 48px;
+            border: none;
+            background: #fff;
+            border-radius: 0 8px 8px 0;
+        }
     }
 `;
 

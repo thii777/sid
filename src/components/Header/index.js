@@ -2,21 +2,19 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { MdSearch, MdPermIdentity } from 'react-icons/md';
+import { MdPermIdentity, MdSearch } from 'react-icons/md';
 
 import {
     Container,
     NavBar,
     Menu,
     Cart,
-    Sac,
-    Attendance,
-    Help,
     Shoes,
     Tshirt,
     Short,
     Hat,
     Clock,
+    TaskInput,
 } from './styles';
 
 import logo from '../../assets/logo.png';
@@ -25,19 +23,18 @@ export default function Header() {
     return (
         <Container>
             <Menu>
-                <Sac>
-                    <Attendance to="/attendance">
-                        <span>atendimento &nbsp; -</span>
-                    </Attendance>
-                    <Help to="/help">
-                        <span> &nbsp; ajuda</span>
-                    </Help>
-                </Sac>
                 <Link to="/">
                     <img src={logo} alt="Sidsurf" />
                 </Link>
+                <TaskInput>
+                    <div>
+                        <input type="text" placeholder="Produtos" />
+                        <button type="submit">
+                            <MdSearch size={25} color="#999" />
+                        </button>
+                    </div>
+                </TaskInput>
                 <Cart to="/cart">
-                    <MdSearch size={25} color="#000" />
                     <MdPermIdentity size={25} color="#000" />
                     <div>
                         <span>carrinho &nbsp; - &nbsp; </span>
