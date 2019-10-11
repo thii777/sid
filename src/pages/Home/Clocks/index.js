@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-import { ProductList } from './styles';
+import { ProductList } from '../../../components/StylesStore/styles';
 import casio from '../../../assets/clock-casio.jpg';
 import ripcurl from '../../../assets/clock-ripcurl.jpg';
 

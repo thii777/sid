@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-import { ProductList } from './styles';
+import { ProductList } from '../../../components/StylesStore/styles';
 import newbalance from '../../../assets/newbalance.jpg';
 import oakley from '../../../assets/oakley-halftrack.jpg';
 import ous from '../../../assets/ous.jpg';

@@ -84,7 +84,7 @@ export const NavBar = styled.header`
 
 // Article
 
-export const Shoes = styled(Link)`
+export const StylesHeader = styled(Link)`
     text-decoration: none;
     color: #000;
     font-size: 10px;
@@ -92,44 +92,10 @@ export const Shoes = styled(Link)`
     &:hover {
         color: blue;
     }
-`;
 
-export const Tshirt = styled(Link)`
-    text-decoration: none;
-    color: #000;
-    font-size: 10px;
-
-    &:hover {
-        color: blue;
-    }
-`;
-
-export const Short = styled(Link)`
-    text-decoration: none;
-    color: #000;
-    font-size: 10px;
-
-    &:hover {
-        color: blue;
-    }
-`;
-
-export const Hat = styled(Link)`
-    text-decoration: none;
-    color: #000;
-    font-size: 10px;
-
-    &:hover {
-        color: blue;
-    }
-`;
-
-export const Clock = styled(Link)`
-    text-decoration: none;
-    color: #000;
-    font-size: 10px;
-
-    &:hover {
+    span {
+        font-weight: bold;
+        font-size: 12px;
         color: blue;
     }
 `;

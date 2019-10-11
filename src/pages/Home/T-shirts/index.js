@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-import { ProductList } from './styles';
+import { ProductList } from '../../../components/StylesStore/styles';
 import nike from '../../../assets/shirt-nike-black.jpg';
 import oakley from '../../../assets/shirt-oakley-grey.jpg';
 

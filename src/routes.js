@@ -8,6 +8,9 @@ import Tshirt from './pages/Home/T-shirts';
 import Short from './pages/Home/Shorts';
 import Hat from './pages/Home/Hats';
 import Clock from './pages/Home/Clocks';
+import Sockets from './pages/Home/Sockets';
+import Accessories from './pages/Home/Accessories';
+import Promotion from './pages/Home/Promotion';
 
 export default function Routes() {
     return (
@@ -19,6 +22,9 @@ export default function Routes() {
             <Route path="/short" component={Short} />
             <Route path="/hat" component={Hat} />
             <Route path="/clock" component={Clock} />
+            <Route path="/sockets" component={Sockets} />
+            <Route path="/accessories" component={Accessories} />
+            <Route path="/promotion" component={Promotion} />
         </Switch>
     );
 }

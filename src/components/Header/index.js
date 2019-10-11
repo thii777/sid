@@ -9,11 +9,7 @@ import {
     NavBar,
     Menu,
     Cart,
-    Shoes,
-    Tshirt,
-    Short,
-    Hat,
-    Clock,
+    StylesHeader,
     TaskInput,
 } from './styles';
 
@@ -43,26 +39,32 @@ export default function Header() {
                 </Cart>
             </Menu>
             <NavBar>
-                <Shoes to="/shoes">
+                <StylesHeader to="/shoes">
                     <li>Tenis</li>
-                </Shoes>
-                <Tshirt to="/t-shirt">
+                </StylesHeader>
+                <StylesHeader to="/t-shirt">
                     <li>Camisetas</li>
-                </Tshirt>
-                <Short to="/short">
+                </StylesHeader>
+                <StylesHeader to="/short">
                     <li>Shorts</li>
-                </Short>
-                <Hat to="/hat">
+                </StylesHeader>
+                <StylesHeader to="/hat">
                     <li>Bones</li>
-                </Hat>
-                <Clock to="/clock">
+                </StylesHeader>
+                <StylesHeader to="/clock">
                     <li>Relogios</li>
-                </Clock>
-                <li>Cuecas e meias</li>
-                <li>Acessorios</li>
-                <li>
-                    <span>Promoções</span>
-                </li>
+                </StylesHeader>
+                <StylesHeader to="/sockets">
+                    <li>Cuecas e meias</li>
+                </StylesHeader>
+                <StylesHeader to="/accessories">
+                    <li>Acessorios</li>
+                </StylesHeader>
+                <StylesHeader to="/promotion">
+                    <li>
+                        <span>Promoções</span>
+                    </li>
+                </StylesHeader>
             </NavBar>
         </Container>
     );

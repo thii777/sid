@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-import { ProductList } from './styles';
+import { ProductList } from '../../../components/StylesStore/styles';
 import color from '../../../assets/short-color.jpg';
 import green from '../../../assets/short-green.jpg';
 
