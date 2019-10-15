@@ -31,7 +31,7 @@ Front end of the project created from scratch to insert a physical store in the 
  * Banner creation
  * Why buy on the site (4 advantages with icons)
 
- #### Session Shoes
+ #### Session Catalog
 
  * Route Creation for Shoe Purchase Session
  * Shoes style
@@ -43,14 +43,28 @@ Front end of the project created from scratch to insert a physical store in the 
  * In this application the polished library was used to <br />
    darken the button when passing the mouser
 
+ #### Json-server creation
+
+ * I used json-server to simulate an api while building every <br />
+   front end of the site
+
+ #### working with redux
+
+ * I'm using redux to manipulate components that will have cart access <br />
+   and control other global states
+ * The library react-redux makes the integration between react and redux
+
  #### Technologies used
 
  - [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html)
  - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
- - [styled-components](https://www.styled-components.com/)
+ - [styled-components](https://www.styled-components.com)
  - [react-icons](https://www.styled-components.com)
  - [polished](https://www.npmjs.com/package/polished)
  - [json-server](https://github.com/typicode/json-server)
+ - [redux](https://redux.js.org)
+ - [react redux](https://github.com/reduxjs/react-redux)
+
 
 ## License
 

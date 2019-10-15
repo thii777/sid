@@ -1,146 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-import { ProductList } from '../../../components/StylesStore/styles';
-import newbalance from '../../../assets/newbalance.jpg';
-import oakley from '../../../assets/oakley-halftrack.jpg';
-import ous from '../../../assets/ous.jpg';
+import { formatPrice } from '../../../util/format';
 
-export default function Shoes() {
-    return (
-        <ProductList>
-            <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={oakley} alt="Tenis" />
-                <strong>Oakley</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={ous} alt="Tenis" />
-                <strong>Ous</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={ous} alt="Tenis" />
-                <strong>Ous</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={ous} alt="Tenis" />
-                <strong>Ous</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={ous} alt="Tenis" />
-                <strong>Ous</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={newbalance} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={newbalance} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={newbalance} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={newbalance} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-        </ProductList>
-    );
+import api from '../../../services/api';
+
+import { ProductList } from '../../../components/StylesStore/styles';
+
+export default class Shoes extends Component {
+    state = {
+        products: [],
+    };
+
+    async componentDidMount() {
+        const response = await api.get('products');
+
+        const data = response.data.map(product => ({
+            ...product,
+            priceFormatted: formatPrice(product.price),
+        }));
+
+        this.setState({ products: data });
+    }
+
+    render() {
+        const { products } = this.state;
+
+        return (
+            <ProductList>
+                {products.map(product => (
+                    <li key={product.id}>
+                        <img src={product.image} alt={product.title} />
+                        <strong>{product.title}</strong>
+                        <span>{product.priceFormatted}</span>
+                        <button type="button">
+                            <div>
+                                <MdAddShoppingCart size={16} color="#fff" /> 3
+                            </div>
+                            <span>adicionar ao carrinho</span>
+                        </button>
+                    </li>
+                ))}
+            </ProductList>
+        );
+    }
 }
