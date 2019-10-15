@@ -14,9 +14,11 @@ export default function Cart() {
             <ProductTable>
                 <thead>
                     <tr>
+                        <tr />
                         <th>produto</th>
                         <th>qtd</th>
                         <th>subtotal</th>
+                        <tr />
                     </tr>
                 </thead>
                 <tbody>

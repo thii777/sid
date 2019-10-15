@@ -50,6 +50,7 @@ Front end of the project created from scratch to insert a physical store in the 
  - [styled-components](https://www.styled-components.com/)
  - [react-icons](https://www.styled-components.com)
  - [polished](https://www.npmjs.com/package/polished)
+ - [json-server](https://github.com/typicode/json-server)
 
 ## License
 
