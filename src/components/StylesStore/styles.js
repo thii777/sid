@@ -17,11 +17,12 @@ export const ProductList = styled.ul`
         padding: 20px;
 
         img {
-            align-self: center;
+            align-self: left;
             max-width: 250px;
         }
 
         > strong {
+            margin-top: 10px;
             font-size: 16px;
             line-height: 20px;
             color: #333;
@@ -30,11 +31,12 @@ export const ProductList = styled.ul`
         > span {
             font-size: 21px;
             font-weight: bold;
-            margin: 5px 0 20px;
+            margin: 5px 0 10px;
         }
 
         button {
-            background: #093f79;
+            width: 250px;
+            background: #ff8c00;
             color: #fff;
             border-radius: 4px;
             border: none;
@@ -45,7 +47,7 @@ export const ProductList = styled.ul`
             transition: background 0.2s;
 
             &:hover {
-                background: ${darken(0.03, '#093f79')};
+                background: ${darken(0.03, '#ff8c00')};
             }
 
             div {

@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+
+import { connect } from 'react-redux';
 
 import { MdPermIdentity, MdSearch } from 'react-icons/md';
 
@@ -15,7 +16,7 @@ import {
 
 import logo from '../../assets/logo.png';
 
-export default function Header() {
+function Header({ cartSize }) {
     return (
         <Container>
             <Menu>
@@ -34,7 +35,7 @@ export default function Header() {
                     <MdPermIdentity size={25} color="#000" />
                     <div>
                         <span>carrinho &nbsp; - &nbsp; </span>
-                        <span>0&nbsp;itens</span>
+                        <span>{cartSize}&nbsp;itens</span>
                     </div>
                 </Cart>
             </Menu>
@@ -69,3 +70,7 @@ export default function Header() {
         </Container>
     );
 }
+
+export default connect(state => ({
+    cartSize: state.cart.length,
+}))(Header);

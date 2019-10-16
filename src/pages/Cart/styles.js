@@ -3,7 +3,6 @@ import { darken } from 'polished';
 
 export const Container = styled.div`
     padding: 20px;
-    border: 1px solid #d6d6d6;
     border-radius: 4px;
     max-width: 95%;
     margin: 30px 0 0 35px;
@@ -53,8 +52,7 @@ export const ProductTable = styled.table`
     }
 
     img {
-        height: 100%;
-        padding-bottom: 15px;
+        max-width: 120px;
     }
 
     strong {
