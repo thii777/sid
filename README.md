@@ -65,7 +65,6 @@ Front end of the project created from scratch to insert a physical store in the 
  - [redux](https://redux.js.org)
  - [react redux](https://github.com/reduxjs/react-redux)
 
-
 ## License
 
 MIT © [Thiago Carvalho](https://thiagocarvalho.com.br/license)
