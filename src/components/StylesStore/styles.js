@@ -6,13 +6,13 @@ export const ProductList = styled.ul`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     list-style: none;
-    margin: 0px 25px 0 25px;
+    margin: 0px 25px 20px 25px;
 
     li {
         display: flex;
         flex-direction: column;
         background: #fff;
-        /* border: 1px solid #d6d6d6; */
+        border: 1px solid #d6d6d6;
         border-radius: 4px;
         padding: 20px;
 
@@ -23,13 +23,13 @@ export const ProductList = styled.ul`
 
         > strong {
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 20px;
             color: #333;
         }
 
         > span {
-            font-size: 21px;
+            font-size: 17px;
             font-weight: bold;
             margin: 5px 0 10px;
         }

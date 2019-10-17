@@ -87,7 +87,12 @@ function Cart({ cart, total, removeFromCart, updateAmount }) {
                 </tbody>
             </ProductTable>
             <footer>
-                <button type="button">Finalizar o pedido</button>
+                <div>
+                    <button type="button">Finalizar o pedido</button>
+                    <button type="button" className="bay-more">
+                        Continuar comprando
+                    </button>
+                </div>
 
                 <Total>
                     <span>total</span>

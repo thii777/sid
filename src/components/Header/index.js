@@ -9,6 +9,7 @@ import {
     Container,
     NavBar,
     Menu,
+    Perfil,
     Cart,
     StylesHeader,
     TaskInput,
@@ -31,13 +32,15 @@ function Header({ cartSize }) {
                         </button>
                     </div>
                 </TaskInput>
-                <Cart to="/cart">
-                    <MdPermIdentity size={25} color="#000" />
-                    <div>
-                        <span>carrinho &nbsp; - &nbsp; </span>
+                <div className="perfil-cart-container">
+                    <Perfil>
+                        <MdPermIdentity size={25} color="#000" />
+                    </Perfil>
+                    <Cart to="/cart">
+                        <span>carrinho&nbsp;-&nbsp;</span>
                         <span>{cartSize}&nbsp;itens</span>
-                    </div>
-                </Cart>
+                    </Cart>
+                </div>
             </Menu>
             <NavBar>
                 <StylesHeader to="/shoes">

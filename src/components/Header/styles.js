@@ -15,6 +15,10 @@ export const Menu = styled.header`
     align-items: center;
     letter-spacing: 3px;
     padding: 25px 55px 0 55px;
+
+    .perfil-cart-container {
+        display: flex;
+    }
 `;
 
 export const TaskInput = styled.div`
@@ -47,25 +51,26 @@ export const TaskInput = styled.div`
     }
 `;
 
+export const Perfil = styled(Link)`
+    margin-right: 10px;
+`;
+
 export const Cart = styled(Link)`
     display: flex;
     align-items: center;
     text-decoration: none;
     text-transform: uppercase;
 
-    div {
-        transition: opacity 0.2s;
-        color: #000;
-        margin-left: 11px;
+    transition: opacity 0.2s;
+    color: #000;
 
-        &:hover {
-            opacity: 0.7;
-            color: green;
-        }
+    &:hover {
+        opacity: 0.7;
+        color: green;
+    }
 
-        span {
-            font-size: 11px;
-        }
+    span {
+        font-size: 11px;
     }
 `;
 

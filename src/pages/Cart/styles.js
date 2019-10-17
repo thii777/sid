@@ -17,7 +17,7 @@ export const Container = styled.div`
             background: #093f79;
             color: #fff;
             border-radius: 4px;
-            border: none;
+            border: 1px solid #093f79;
             padding: 12px 20px;
             font-weight: bold;
             text-transform: uppercase;
@@ -25,6 +25,20 @@ export const Container = styled.div`
 
             &:hover {
                 background: ${darken(0.03, '#093f79')};
+            }
+        }
+        button.bay-more {
+            background: none;
+            border: 1px solid #093f79;
+            color: #093f79;
+            margin-left: 5px;
+            padding: 12px 10px;
+
+            &:hover {
+                background: #093f79;
+                color: #fff;
+                border: 1px solid #093f79;
+                font-weight: bold;
             }
         }
     }

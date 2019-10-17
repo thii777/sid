@@ -17,9 +17,9 @@ export default function Home() {
                     <MdLocalShipping size={50} color="#000" />
                     <div>
                         <h2>
-                            <strong>frete gratis</strong>
+                            <strong>frete gratuito</strong>
                         </h2>
-                        <p>Acima de R$ 200</p>
+                        <p>Acima de R$ 100</p>
                     </div>
                 </div>
                 <div className="pay">
