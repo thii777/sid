@@ -7,15 +7,14 @@ export const Container = styled.div`
         background: url(${bunner}) no-repeat center;
         height: 379px;
         width: 100%;
-        margin: 0;
+        margin: 60px 0 0 0;
         padding: 0;
     }
     .advantage {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 110px;
-        padding-top: 20px;
+        height: 85px;
     }
     .post {
         display: flex;
@@ -25,8 +24,11 @@ export const Container = styled.div`
                 text-transform: uppercase;
                 font-size: 18px;
                 font-family: Fjalla one;
+                letter-spacing: 1px;
+                color: #666;
                 p {
                     font-size: 10px;
+                    color: #444;
                 }
             }
         }
@@ -39,6 +41,8 @@ export const Container = styled.div`
                 text-transform: uppercase;
                 font-size: 18px;
                 font-family: Fjalla one;
+                letter-spacing: 1px;
+                color: #666;
                 p {
                     font-size: 10px;
                 }
@@ -53,6 +57,8 @@ export const Container = styled.div`
                 text-transform: uppercase;
                 font-size: 18px;
                 font-family: Fjalla one;
+                letter-spacing: 1px;
+                color: #666;
                 p {
                     font-size: 10px;
                 }
@@ -67,6 +73,8 @@ export const Container = styled.div`
                 text-transform: uppercase;
                 font-size: 18px;
                 font-family: Fjalla one;
+                letter-spacing: 1px;
+                color: #666;
                 p {
                     font-size: 10px;
                 }

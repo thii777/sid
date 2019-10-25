@@ -13,6 +13,7 @@ import {
     Cart,
     StylesHeader,
     TaskInput,
+    FreeShipping,
 } from './styles';
 
 import logo from '../../assets/logo.png';
@@ -20,9 +21,13 @@ import logo from '../../assets/logo.png';
 function Header({ cartSize }) {
     return (
         <Container>
+            <FreeShipping>
+                <strong>Frete grátis na primeira compra</strong>
+                <p>Valido nos fretes até R$ 25</p>
+            </FreeShipping>
             <Menu>
                 <Link to="/">
-                    <img src={logo} alt="Sidsurf" />
+                    <img src={logo} alt="Sidsurf" width={200} />
                 </Link>
                 <TaskInput>
                     <div>

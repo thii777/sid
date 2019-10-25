@@ -10,18 +10,18 @@ import * as CartActions from '../../../store/modules/cart/actions';
 
 class Shoes extends Component {
     state = {
-        products: [],
+        productsShoes: [],
     };
 
     async componentDidMount() {
-        const response = await api.get('products');
+        const response = await api.get('productsShoes');
 
         const data = response.data.map(product => ({
             ...product,
             priceFormatted: formatPrice(product.price),
         }));
 
-        this.setState({ products: data });
+        this.setState({ productsShoes: data });
     }
 
     handleAddProduct = id => {
@@ -31,12 +31,12 @@ class Shoes extends Component {
     };
 
     render() {
-        const { products } = this.state;
+        const { productsShoes } = this.state;
         const { amount } = this.props;
 
         return (
             <ProductList>
-                {products.map(product => (
+                {productsShoes.map(product => (
                     <li key={product.id}>
                         <img src={product.image} alt={product.title} />
                         <strong>{product.title}</strong>

@@ -1,145 +1,75 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { MdAddShoppingCart } from 'react-icons/md';
 
+import { formatPrice } from '../../../util/format';
+import api from '../../../services/api';
 import { ProductList } from '../../../components/StylesStore/styles';
-import color from '../../../assets/short-color.jpg';
-import green from '../../../assets/short-green.jpg';
+import * as CartActions from '../../../store/modules/cart/actions';
 
-export default function Shorts() {
-    return (
-        <ProductList>
-            <li>
-                <img src={color} alt="Tenis" />
-                <strong>Oakley</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={color} alt="Tenis" />
-                <strong>Oakley</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={color} alt="Tenis" />
-                <strong>Oakley</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={color} alt="Tenis" />
-                <strong>Oakley</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={green} alt="Tenis" />
-                <strong>Ous</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={green} alt="Tenis" />
-                <strong>Ous</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={green} alt="Tenis" />
-                <strong>Ous</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={green} alt="Tenis" />
-                <strong>Ous</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={color} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={color} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={color} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-            <li>
-                <img src={color} alt="Tenis" />
-                <strong>New Balance 500</strong>
-                <span>R$ 299,90</span>
-                <button type="button">
-                    <div>
-                        <MdAddShoppingCart size={16} color="#fff" /> 3
-                    </div>
-                    <span>adicionar ao carrinho</span>
-                </button>
-            </li>
-        </ProductList>
-    );
+class Shorts extends Component {
+    state = {
+        productsShorts: [],
+    };
+
+    async componentDidMount() {
+        const response = await api.get('productsShorts');
+
+        const data = response.data.map(product => ({
+            ...product,
+            priceFormatted: formatPrice(product.price),
+        }));
+
+        this.setState({ productsShorts: data });
+    }
+
+    handleAddProduct = id => {
+        const { addToCartRequest } = this.props;
+
+        addToCartRequest(id);
+    };
+
+    render() {
+        const { productsShorts } = this.state;
+        const { amount } = this.props;
+
+        return (
+            <ProductList>
+                {productsShorts.map(product => (
+                    <li key={product.id}>
+                        <img src={product.image} alt={product.title} />
+                        <strong>{product.title}</strong>
+                        <span>{product.priceFormatted}</span>
+                        <button
+                            type="button"
+                            onClick={() => this.handleAddProduct(product.id)}
+                        >
+                            <div>
+                                <MdAddShoppingCart size={16} color="#fff" />{' '}
+                                {amount[product.id] || 0}
+                            </div>
+                            <span>adicionar ao carrinho</span>
+                        </button>
+                    </li>
+                ))}
+            </ProductList>
+        );
+    }
 }
+
+const mapStateToProps = state => ({
+    amount: state.cart.reduce((amount, product) => {
+        amount[product.id] = product.amount;
+
+        return amount;
+    }, {}),
+});
+
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(CartActions, dispatch);
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Shorts);

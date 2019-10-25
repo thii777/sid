@@ -7,6 +7,21 @@ export const Container = styled.header`
     height: 140px;
 `;
 
+export const FreeShipping = styled.header`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    height: 50px;
+    background: #ff8c00;
+    color: #fff;
+
+    p {
+        margin-top: 5px;
+    }
+`;
+
 // Menu
 
 export const Menu = styled.header`
@@ -14,7 +29,7 @@ export const Menu = styled.header`
     justify-content: space-between;
     align-items: center;
     letter-spacing: 3px;
-    padding: 25px 55px 0 55px;
+    padding: 15px 55px 0 55px;
 
     .perfil-cart-container {
         display: flex;
@@ -62,7 +77,7 @@ export const Cart = styled(Link)`
     text-transform: uppercase;
 
     transition: opacity 0.2s;
-    color: #000;
+    color: #999;
 
     &:hover {
         opacity: 0.7;
@@ -77,22 +92,27 @@ export const Cart = styled(Link)`
 // Navbar
 
 export const NavBar = styled.header`
+    @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
     display: flex;
     justify-content: space-between;
     align-items: center;
-    letter-spacing: 3px;
+
     list-style: none;
-    font-size: 13px;
     text-transform: uppercase;
-    padding: 40px 25px 0 25px;
+    padding: 15px 25px 0 25px;
+
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-family: Fjalla;
 `;
 
 // Article
 
 export const StylesHeader = styled(Link)`
     text-decoration: none;
-    color: #000;
-    font-size: 10px;
+    color: #999;
+    font-size: 12px;
+    font-family: Fjalla Arial, Helvetica, sans-serif;
 
     &:hover {
         color: blue;
