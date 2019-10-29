@@ -63,6 +63,8 @@ export default function Home() {
                         <h3>Acessorios</h3>
                         <button type="button">confira</button>
                     </div>
+                </div>
+                <div>
                     <div>
                         <img src={vestuarios} alt="" />
                     </div>
@@ -70,6 +72,8 @@ export default function Home() {
                         <h3>Vestuarios</h3>
                         <button type="button">confira</button>
                     </div>
+                </div>
+                <div>
                     <div>
                         <img src={kit} alt="" />
                     </div>

@@ -31,7 +31,7 @@ function Header({ cartSize }) {
                 </Link>
                 <TaskInput>
                     <div>
-                        <input type="text" placeholder="Produtos" />
+                        <input type="text" placeholder="O que você procura?" />
                         <button type="submit">
                             <MdSearch size={25} color="#999" />
                         </button>
