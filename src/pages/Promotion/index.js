@@ -1,15 +1,15 @@
 import React from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-import { ProductList } from '../../../components/StylesStore/styles';
-import casio from '../../../assets/clock-casio.jpg';
-import ripcurl from '../../../assets/clock-ripcurl.jpg';
+import { ProductList } from '../../components/StylesStore/styles';
+import nyc from '../../assets/hat-nyc.jpg';
+import oakley from '../../assets/hat-oakley.jpg';
 
 export default function Hats() {
     return (
         <ProductList>
             <li>
-                <img src={casio} alt="Tenis" />
+                <img src={nyc} alt="Tenis" />
                 <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -20,7 +20,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={casio} alt="Tenis" />
+                <img src={nyc} alt="Tenis" />
                 <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -31,7 +31,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={casio} alt="Tenis" />
+                <img src={nyc} alt="Tenis" />
                 <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -42,7 +42,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={casio} alt="Tenis" />
+                <img src={nyc} alt="Tenis" />
                 <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -53,7 +53,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={ripcurl} alt="Tenis" />
+                <img src={oakley} alt="Tenis" />
                 <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -64,7 +64,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={ripcurl} alt="Tenis" />
+                <img src={oakley} alt="Tenis" />
                 <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -75,7 +75,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={ripcurl} alt="Tenis" />
+                <img src={oakley} alt="Tenis" />
                 <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -86,7 +86,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={ripcurl} alt="Tenis" />
+                <img src={oakley} alt="Tenis" />
                 <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -97,7 +97,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={casio} alt="Tenis" />
+                <img src={nyc} alt="Tenis" />
                 <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -108,7 +108,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={casio} alt="Tenis" />
+                <img src={nyc} alt="Tenis" />
                 <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -119,7 +119,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={casio} alt="Tenis" />
+                <img src={nyc} alt="Tenis" />
                 <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
@@ -130,7 +130,7 @@ export default function Hats() {
                 </button>
             </li>
             <li>
-                <img src={casio} alt="Tenis" />
+                <img src={nyc} alt="Tenis" />
                 <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">

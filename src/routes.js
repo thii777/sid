@@ -3,14 +3,14 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Cart from './pages/Cart';
-import Shoes from './pages/Home/Shoes';
-import Tshirt from './pages/Home/T-shirts';
-import Short from './pages/Home/Shorts';
-import Hat from './pages/Home/Hats';
-import Clock from './pages/Home/Clocks';
-import Sockets from './pages/Home/Sockets';
-import Accessories from './pages/Home/Accessories';
-import Promotion from './pages/Home/Promotion';
+import Shoes from './pages/Shoes';
+import Tshirt from './pages/T-shirts';
+import Short from './pages/Shorts';
+import Hat from './pages/Hats';
+import Clock from './pages/Clocks';
+import Sockets from './pages/Sockets';
+import Accessories from './pages/Accessories';
+import Promotion from './pages/Promotion';
 
 export default function Routes() {
     return (

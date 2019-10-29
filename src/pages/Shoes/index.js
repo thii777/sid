@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-import { formatPrice } from '../../../util/format';
-import api from '../../../services/api';
-import { ProductList } from '../../../components/StylesStore/styles';
-import * as CartActions from '../../../store/modules/cart/actions';
+import { formatPrice } from '../../util/format';
+import api from '../../services/api';
+import { ProductList } from '../../components/StylesStore/styles';
+import * as CartActions from '../../store/modules/cart/actions';
 
 class Shoes extends Component {
     state = {

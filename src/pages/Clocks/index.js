@@ -1,15 +1,16 @@
 import React from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-import { ProductList } from '../../../components/StylesStore/styles';
-import bracelet from '../../../assets/bracelet.jpg';
+import { ProductList } from '../../components/StylesStore/styles';
+import casio from '../../assets/clock-casio.jpg';
+import ripcurl from '../../assets/clock-ripcurl.jpg';
 
-export default function Shorts() {
+export default function Hats() {
     return (
         <ProductList>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -19,8 +20,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -30,8 +31,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -41,8 +42,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>Boné NYC</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -52,8 +53,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={ripcurl} alt="Tenis" />
+                <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -63,8 +64,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={ripcurl} alt="Tenis" />
+                <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -74,8 +75,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={ripcurl} alt="Tenis" />
+                <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -85,8 +86,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={ripcurl} alt="Tenis" />
+                <strong>Ous</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -96,8 +97,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -107,8 +108,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -118,8 +119,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
@@ -129,8 +130,8 @@ export default function Shorts() {
                 </button>
             </li>
             <li>
-                <img src={bracelet} alt="Tenis" />
-                <strong>bracelet</strong>
+                <img src={casio} alt="Tenis" />
+                <strong>New Balance 500</strong>
                 <span>R$ 299,90</span>
                 <button type="button">
                     <div>
