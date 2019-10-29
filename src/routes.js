@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Shoes from './pages/Shoes';
+import ShoesPageProducts from './pages/ShoesPageProducts';
 import Tshirt from './pages/T-shirts';
 import Short from './pages/Shorts';
 import Hat from './pages/Hats';
@@ -18,6 +19,7 @@ export default function Routes() {
             <Route path="/" exact component={Home} />
             <Route path="/cart" component={Cart} />
             <Route path="/shoes" component={Shoes} />
+            <Route path="/shoesPageProducts" component={ShoesPageProducts} />
             <Route path="/t-shirt" component={Tshirt} />
             <Route path="/short" component={Short} />
             <Route path="/hat" component={Hat} />

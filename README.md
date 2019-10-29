@@ -5,8 +5,8 @@ Front end of the project created from scratch to insert a physical store in the 
 <h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Redux-16.9.0-blue.svg?colorB=90c53f">
-  <img src="https://img.shields.io/badge/Redux-4.0.4-blue.svg?colorB=90c53f">
+  <img src="https://img.shields.io/badge/React-16.9.0-blue.svg?colorB=3f76c5">
+  <img src="https://img.shields.io/badge/Redux-4.0.4-blue.svg?colorB=59add9">
   <img src="https://img.shields.io/badge/Axios-0.19.0-blue.svg?colorB=47535e">
 </p>
 

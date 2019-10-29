@@ -30,7 +30,10 @@
         "id": 1,
         "title": "Nike Air Max 270 React",
         "price": 179.9,
-        "image": "https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/vzu0e3wicxrsxlhxaj20/air-max-270-react-mens-shoe-Bw9qP2.jpg"
+        "image": "https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/nkc7urdmmfg6aceagcxl/air-force-1-07-lv8-mens-shoe-61Bzq8.jpg",
+        "image1": "https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/nkc7urdmmfg6aceagcxl/air-force-1-07-lv8-mens-shoe-61Bzq8.jpg",
+        "image2": "https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/uwngiv4fku9dh0ylhwo1/air-force-1-07-lv8-mens-shoe-61Bzq8.jpg",
+        "image3": "https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/blzoifcvb7pzczhjqh6h/air-force-1-07-lv8-mens-shoe-61Bzq8.jpg"
       },
       {
         "id": 2,
