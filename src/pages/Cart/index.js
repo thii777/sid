@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
@@ -39,6 +40,8 @@ function Cart({ cart, total, removeFromCart, updateAmount }) {
                         <tr>
                             <td>
                                 <img src={product.image} alt={product.title} />
+                                <img src={product.image2} alt={product.title} />
+                                <img src={product.image3} alt={product.title} />
                             </td>
                             <td>
                                 <strong>{product.title}</strong>
@@ -89,9 +92,11 @@ function Cart({ cart, total, removeFromCart, updateAmount }) {
             <footer>
                 <div>
                     <button type="button">Finalizar o pedido</button>
-                    <button type="button" className="bay-more">
-                        Continuar comprando
-                    </button>
+                    <Link to="/">
+                        <button type="button" className="bay-more">
+                            Continuar comprando
+                        </button>
+                    </Link>
                 </div>
 
                 <Total>

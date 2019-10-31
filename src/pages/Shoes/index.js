@@ -49,7 +49,7 @@ class Shoes extends Component {
                                 <MdAddShoppingCart size={16} color="#fff" />{' '}
                                 {amount[product.id] || 0}
                             </div>
-                            <span>adicionar ao carrinho</span>
+                            <span>Ver detalhes do produto</span>
                         </button>
                     </li>
                 ))}

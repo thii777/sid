@@ -67,6 +67,7 @@ export const ProductTable = styled.table`
 
     img {
         max-width: 120px;
+        margin-left: 5px;
     }
 
     strong {
