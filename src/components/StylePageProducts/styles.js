@@ -21,6 +21,7 @@ export const PageProductList = styled.div`
         max-width: 400px;
         width: 100%;
         margin: 15px;
+        cursor: pointer;
     }
 
     .sider-nav {
@@ -33,7 +34,8 @@ export const PageProductList = styled.div`
 
             li {
                 list-style: none;
-                margin-bottom: 5px;
+                margin-bottom: 15px;
+                color: #777777;
             }
         }
         button {

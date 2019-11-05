@@ -1,3 +1,20 @@
+// Page product
+
+export function sendToPageDescriptionRequest(id) {
+    return {
+        type: '@page/SEND_REQUEST',
+        id,
+    };
+}
+
+export function sendToPageDescriptionSuccess(product) {
+    return {
+        type: '@page/SEND_SUCCESS',
+        product,
+    };
+}
+
+// Cart
 export function addToCartRequest(id) {
     return {
         type: '@cart/ADD_REQUEST',

@@ -36,6 +36,7 @@ export const ProductList = styled.ul`
 
         button {
             width: 250px;
+            height: 40px;
             background: #ff8c00;
             color: #fff;
             border-radius: 4px;

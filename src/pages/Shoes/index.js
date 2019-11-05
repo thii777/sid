@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { MdAddShoppingCart } from 'react-icons/md';
 
 import { formatPrice } from '../../util/format';
 import api from '../../services/api';
@@ -25,30 +24,30 @@ class Shoes extends Component {
     }
 
     handleAddProduct = id => {
-        const { addToCartRequest } = this.props;
+        const { sendToPageDescriptionRequest } = this.props;
 
-        addToCartRequest(id);
+        sendToPageDescriptionRequest(id);
     };
 
     render() {
         const { productsShoes } = this.state;
-        const { amount } = this.props;
+        // const { amount } = this.props;
 
         return (
             <ProductList>
                 {productsShoes.map(product => (
                     <li key={product.id}>
-                        <img src={product.image} alt={product.title} />
+                        <img
+                            onClick={() => this.handleAddProduct(product.id)}
+                            src={product.image}
+                            alt={product.title}
+                        />
                         <strong>{product.title}</strong>
                         <span>{product.priceFormatted}</span>
                         <button
                             type="button"
                             onClick={() => this.handleAddProduct(product.id)}
                         >
-                            <div>
-                                <MdAddShoppingCart size={16} color="#fff" />{' '}
-                                {amount[product.id] || 0}
-                            </div>
                             <span>Ver detalhes do produto</span>
                         </button>
                     </li>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -11,12 +11,21 @@ import {
     Container,
 } from '../../components/StylePageProducts/styles';
 
-function ShoesPageProducts({ pageProduct }) {
-    return (
-        <Container>
-            <PageProductList>
+class ShoesPageProducts extends Component {
+    handleAddProduct = id => {
+        const { addToCartRequest } = this.props;
+
+        addToCartRequest(id);
+    };
+
+    render() {
+        const { pageProduct } = this.props;
+        console.tron.log(pageProduct);
+
+        return (
+            <Container>
                 {pageProduct.map(product => (
-                    <div>
+                    <PageProductList>
                         <div>
                             <h2>Galeria de fotos</h2>
                             <div>
@@ -24,39 +33,46 @@ function ShoesPageProducts({ pageProduct }) {
                                 <img src={product.image1} alt={product.title} />
                                 <img src={product.image2} alt={product.title} />
                                 <img src={product.image3} alt={product.title} />
+                                <img src={product.image4} alt={product.title} />
+                                <img src={product.image5} alt={product.title} />
                             </div>
                         </div>
                         <div className="sider-nav">
                             <h3>{product.title}</h3>
                             <ul>
                                 <li className="category">
-                                    <span>Categoria:</span> Calçado
+                                    <span>{product.category}</span>
                                 </li>
                                 <li className="brand">
-                                    <span>Marca:</span> Nike
+                                    <span>{product.brand}</span>
                                 </li>
                                 <li className="price">
-                                    <span>Oferta:</span>
+                                    <span>{product.priceFormatted}</span>
                                 </li>
                                 <li className="color">
-                                    <span>Cor:</span> Branco
+                                    <span>{product.color}</span>
                                 </li>
                                 <li className="size">
-                                    <span>Tamanho:</span> 39/40
+                                    <span>Tamanho: {product.size}</span>
                                 </li>
                                 <li className="code">
-                                    <span>Codigo do produto:</span> 41625
+                                    <span>{product.code}</span>
                                 </li>
-                                <button type="button">
-                                    Adicionar ao carrinho
+                                <button
+                                    type="button"
+                                    onClick={() =>
+                                        this.handleAddProduct(product.id)
+                                    }
+                                >
+                                    Comprar
                                 </button>
                                 <button className="favorite" type="button">
-                                    Adcionar aos favoritos
+                                    Adcionar a carrinho
                                 </button>
                             </ul>
 
                             <div className="productDescription">
-                                <h3>{product.title}</h3>
+                                <h3>Detalhes do produto</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor
@@ -72,11 +88,11 @@ function ShoesPageProducts({ pageProduct }) {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </PageProductList>
                 ))}
-            </PageProductList>
-        </Container>
-    );
+            </Container>
+        );
+    }
 }
 
 const mapStateToProps = state => ({

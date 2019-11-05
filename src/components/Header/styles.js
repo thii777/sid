@@ -93,6 +93,7 @@ export const Cart = styled(Link)`
 
 export const NavBar = styled.header`
     @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
     display: flex;
     justify-content: space-between;
     align-items: center;

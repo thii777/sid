@@ -40,8 +40,6 @@ function Cart({ cart, total, removeFromCart, updateAmount }) {
                         <tr>
                             <td>
                                 <img src={product.image} alt={product.title} />
-                                <img src={product.image2} alt={product.title} />
-                                <img src={product.image3} alt={product.title} />
                             </td>
                             <td>
                                 <strong>{product.title}</strong>
