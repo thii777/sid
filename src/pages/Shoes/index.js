@@ -5,7 +5,8 @@ import { bindActionCreators } from 'redux';
 import { formatPrice } from '../../util/format';
 import api from '../../services/api';
 import { ProductList } from '../../components/StylesStore/styles';
-import * as CartActions from '../../store/modules/cart/actions';
+// import * as CartActions from '../../store/modules/cart/actions';
+import * as PageActions from '../../store/modules/product/actions';
 
 class Shoes extends Component {
     state = {
@@ -24,9 +25,9 @@ class Shoes extends Component {
     }
 
     handleAddProduct = id => {
-        const { sendToPageDescriptionRequest } = this.props;
+        const { sendToPageRequest } = this.props;
 
-        sendToPageDescriptionRequest(id);
+        sendToPageRequest(id);
     };
 
     render() {
@@ -58,7 +59,7 @@ class Shoes extends Component {
 }
 
 const mapStateToProps = state => ({
-    amount: state.cart.reduce((amount, product) => {
+    amount: state.product.reduce((amount, product) => {
         amount[product.id] = product.amount;
 
         return amount;
@@ -66,7 +67,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch =>
-    bindActionCreators(CartActions, dispatch);
+    bindActionCreators(PageActions, dispatch);
 
 export default connect(
     mapStateToProps,

@@ -58,16 +58,16 @@ function Header({ cartSize }) {
                     <li>Shorts</li>
                 </StylesHeader>
                 <StylesHeader to="/hat">
-                    <li>Bones</li>
+                    <li>Bonés</li>
                 </StylesHeader>
                 <StylesHeader to="/clock">
-                    <li>Relogios</li>
+                    <li>Relógios</li>
                 </StylesHeader>
                 <StylesHeader to="/sockets">
                     <li>Cuecas e meias</li>
                 </StylesHeader>
                 <StylesHeader to="/accessories">
-                    <li>Acessorios</li>
+                    <li>Acessórios</li>
                 </StylesHeader>
                 <StylesHeader to="/promotion">
                     <li>

@@ -12,7 +12,7 @@ import {
 } from '../../components/StylePageProducts/styles';
 
 class ShoesPageProducts extends Component {
-    handleAddProduct = id => {
+    handleAddCart = id => {
         const { addToCartRequest } = this.props;
 
         addToCartRequest(id);
@@ -20,12 +20,11 @@ class ShoesPageProducts extends Component {
 
     render() {
         const { pageProduct } = this.props;
-        console.tron.log(pageProduct);
 
         return (
             <Container>
                 {pageProduct.map(product => (
-                    <PageProductList>
+                    <PageProductList key={product.id}>
                         <div>
                             <h2>Galeria de fotos</h2>
                             <div>
@@ -58,16 +57,16 @@ class ShoesPageProducts extends Component {
                                 <li className="code">
                                     <span>{product.code}</span>
                                 </li>
+                                <button className="favorite" type="button">
+                                    Comprar
+                                </button>
                                 <button
                                     type="button"
                                     onClick={() =>
-                                        this.handleAddProduct(product.id)
+                                        this.handleAddCart(product.id)
                                     }
                                 >
-                                    Comprar
-                                </button>
-                                <button className="favorite" type="button">
-                                    Adcionar a carrinho
+                                    Adcionar ao carrinho
                                 </button>
                             </ul>
 
@@ -96,7 +95,7 @@ class ShoesPageProducts extends Component {
 }
 
 const mapStateToProps = state => ({
-    pageProduct: state.cart.map(product => ({
+    pageProduct: state.product.map(product => ({
         ...product,
         subTotal: formatPrice(product.price),
     })),
