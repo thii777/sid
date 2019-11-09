@@ -28,16 +28,14 @@ class ShoesPageProducts extends Component {
                         <div>
                             <h2>Galeria de fotos</h2>
                             <div>
-                                <img src={product.image} alt={product.title} />
-                                <img src={product.image1} alt={product.title} />
-                                <img src={product.image2} alt={product.title} />
-                                <img src={product.image3} alt={product.title} />
-                                <img src={product.image4} alt={product.title} />
-                                <img src={product.image5} alt={product.title} />
+                                <img
+                                    src={product.image_product_id}
+                                    alt={product.product_name}
+                                />
                             </div>
                         </div>
                         <div className="sider-nav">
-                            <h3>{product.title}</h3>
+                            <h3>{product.product_name}</h3>
                             <ul>
                                 <li className="category">
                                     <span>{product.category}</span>
@@ -55,7 +53,7 @@ class ShoesPageProducts extends Component {
                                     <span>Tamanho: {product.size}</span>
                                 </li>
                                 <li className="code">
-                                    <span>{product.code}</span>
+                                    <span>{product.brand}</span>
                                 </li>
                                 <button className="favorite" type="button">
                                     Comprar

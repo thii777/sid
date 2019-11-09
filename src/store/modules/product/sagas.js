@@ -7,7 +7,7 @@ import { formatPrice } from '../../../util/format';
 import { sendToPageSuccess } from './actions';
 
 function* sendToPage({ id }) {
-    const response = yield call(api.get, `/productsShoes/${id}`);
+    const response = yield call(api.get, `/products/${id}`);
 
     const data = {
         ...response.data,

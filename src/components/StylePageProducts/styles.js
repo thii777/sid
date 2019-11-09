@@ -39,7 +39,7 @@ export const PageProductList = styled.div`
             }
         }
         button {
-            margin-top: 15px;
+            margin-top: 5px;
             width: 250px;
             height: 30px;
             background: #ff8c00;

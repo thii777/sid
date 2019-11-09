@@ -5,23 +5,22 @@ import { bindActionCreators } from 'redux';
 import { formatPrice } from '../../util/format';
 import api from '../../services/api';
 import { ProductList } from '../../components/StylesStore/styles';
-// import * as CartActions from '../../store/modules/cart/actions';
 import * as PageActions from '../../store/modules/product/actions';
 
 class Shoes extends Component {
     state = {
-        productsShoes: [],
+        products: [],
     };
 
     async componentDidMount() {
-        const response = await api.get('productsShoes');
+        const response = await api.get('/products');
 
         const data = response.data.map(product => ({
             ...product,
             priceFormatted: formatPrice(product.price),
         }));
 
-        this.setState({ productsShoes: data });
+        this.setState({ products: data });
     }
 
     handleAddProduct = id => {
@@ -31,19 +30,19 @@ class Shoes extends Component {
     };
 
     render() {
-        const { productsShoes } = this.state;
+        const { products } = this.state;
         // const { amount } = this.props;
 
         return (
             <ProductList>
-                {productsShoes.map(product => (
+                {products.map(product => (
                     <li key={product.id}>
                         <img
-                            onClick={() => this.handleAddProduct(product.id)}
-                            src={product.image}
-                            alt={product.title}
+                            // onClick={() => this.handleAddProduct(product.id)}
+                            src={product.images.url}
+                            alt={product.product_name}
                         />
-                        <strong>{product.title}</strong>
+                        <strong>{product.product_name}</strong>
                         <span>{product.priceFormatted}</span>
                         <button
                             type="button"
