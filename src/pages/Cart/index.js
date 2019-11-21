@@ -39,10 +39,10 @@ function Cart({ cart, total, removeFromCart, updateAmount }) {
                     {cart.map(product => (
                         <tr>
                             <td>
-                                <img src={product.image} alt={product.title} />
+                                <img src={product.url} alt={product.title} />
                             </td>
                             <td>
-                                <strong>{product.title}</strong>
+                                <strong>{product.name}</strong>
                                 <span>{product.priceFormatted}</span>
                             </td>
                             <td>

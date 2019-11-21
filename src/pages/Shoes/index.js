@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -13,6 +14,7 @@ class Shoes extends Component {
     };
 
     async componentDidMount() {
+        // const response = await api.get(`${category}`);
         const response = await api.get('/products');
 
         const data = response.data.map(product => ({
@@ -35,33 +37,46 @@ class Shoes extends Component {
 
         return (
             <ProductList>
-                {products.map(product => (
-                    <li key={product.id}>
-                        <img
-                            // onClick={() => this.handleAddProduct(product.id)}
-                            src={product.images.url}
-                            alt={product.product_name}
-                        />
-                        <strong>{product.product_name}</strong>
-                        <span>{product.priceFormatted}</span>
-                        <button
-                            type="button"
-                            onClick={() => this.handleAddProduct(product.id)}
-                        >
-                            <span>Ver detalhes do produto</span>
-                        </button>
-                    </li>
-                ))}
+                <>
+                    {products.map(product => (
+                        <li key={product.id}>
+                            <img
+                                onClick={() =>
+                                    this.handleAddProduct(product.id)
+                                }
+                                src={product.url}
+                                alt={product.name}
+                            />
+                            <div className="name-id">
+                                <strong>{product.name}</strong>
+                                <p>ID: {product.id}</p>
+                            </div>
+                            {/* <strong>{product.name}</strong> */}
+                            <span>{product.priceFormatted}</span>
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    this.handleAddProduct(product.id)
+                                }
+                            >
+                                <span>Ver detalhes do produto</span>
+                            </button>
+                        </li>
+                    ))}
+                    <Link to="/shoesnew">
+                        <button className="btn">Cadastra produto</button>
+                    </Link>
+                </>
             </ProductList>
         );
     }
 }
 
 const mapStateToProps = state => ({
-    amount: state.product.reduce((amount, product) => {
-        amount[product.id] = product.amount;
+    product: state.product.reduce(product => {
+        product.id = product;
 
-        return amount;
+        return product;
     }, {}),
 });
 

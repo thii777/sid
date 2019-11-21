@@ -11,7 +11,7 @@ export const ProductList = styled.ul`
         display: flex;
         flex-direction: column;
 
-        label#images {
+        label#image {
             max-width: 200px;
             margin-bottom: 20px;
             border: 1px dashed #ddd;
@@ -24,7 +24,7 @@ export const ProductList = styled.ul`
             align-items: center;
         }
 
-        label#images input {
+        label#image input {
             display: none;
         }
 

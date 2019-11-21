@@ -1,49 +1,69 @@
 import React, { useState, useMemo } from 'react';
-// import api from '../../services/api';
+import api from '../../services/api';
 
 import camera from '../../assets/camera.svg';
 
 import { ProductList } from '../../components/StylesNewProducts/index';
 
-export default function ShoesNew() {
-    const [images, setImages] = useState(null);
-    const [products, setProducts] = useState('');
+export default function ShoesNew({ history }) {
+    const [image, setImage] = useState(null);
+    const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [brand, setBrand] = useState('');
     const [size, setSize] = useState('');
+    const [color, setColor] = useState('');
     const [amount, setAmount] = useState('');
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
 
     const preview = useMemo(() => {
-        return images ? URL.createObjectURL(images) : null;
-    }, [images]);
+        return image ? URL.createObjectURL(image) : null;
+    }, [image]);
 
-    function handleSubmit() {
-        // const teste = api.products;
-        // return teste;
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        const data = new FormData();
+        data.append('image', image);
+        data.append('name', name);
+        data.append('price', price);
+        data.append('brand', brand);
+        data.append('size', size);
+        data.append('color', color);
+        data.append('amount', amount);
+        data.append('category', category);
+        data.append('description', description);
+
+        // Send category db
+        // await api.post('products', data);
+        await api.post(`${category}`, data);
+
+        history.push(`/${category}`);
     }
+
     return (
         <ProductList>
             <form onSubmit={handleSubmit}>
                 <label
-                    id="images"
+                    id="image"
                     style={{ backgroundImage: `url(${preview})` }}
                 >
                     <input
                         type="file"
                         multiple
-                        onChange={e => setImages(e.target.files[0])}
+                        onChange={e => setImage(e.target.files[0])}
                     />
-                    <img src={camera} alt="Select images" />
+                    <>
+                        <img src={camera} alt="Coloque uma foto" />
+                    </>
                 </label>
 
-                <label htmlFor="products">Produto</label>
+                <label htmlFor="name">Produto</label>
                 <input
-                    id="products"
+                    id="name"
                     placeholder="Nome do produto"
-                    value={products}
-                    onChange={e => setProducts(e.target.value)}
+                    value={name}
+                    onChange={e => setName(e.target.value)}
                 />
 
                 <label htmlFor="price">Preço</label>
@@ -68,6 +88,14 @@ export default function ShoesNew() {
                     placeholder="Tamanho"
                     value={size}
                     onChange={e => setSize(e.target.value)}
+                />
+
+                <label htmlFor="color">Cor</label>
+                <input
+                    id="color"
+                    placeholder="Cor do produto"
+                    value={color}
+                    onChange={e => setColor(e.target.value)}
                 />
 
                 <label htmlFor="amount">Estoque</label>
