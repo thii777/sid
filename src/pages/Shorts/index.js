@@ -1,75 +1,89 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { MdAddShoppingCart } from 'react-icons/md';
 
 import { formatPrice } from '../../util/format';
 import api from '../../services/api';
 import { ProductList } from '../../components/StylesStore/styles';
-import * as CartActions from '../../store/modules/cart/actions';
+import * as PageActions from '../../store/modules/product/actions';
 
-class Shorts extends Component {
+class Short extends Component {
     state = {
-        productsShorts: [],
+        products: [],
     };
 
     async componentDidMount() {
-        const response = await api.get('productsShorts');
+        // const response = await api.get(`${category}`);
+        const response = await api.get('/products');
 
         const data = response.data.map(product => ({
             ...product,
             priceFormatted: formatPrice(product.price),
         }));
 
-        this.setState({ productsShorts: data });
+        this.setState({ products: data });
     }
 
     handleAddProduct = id => {
-        const { addToCartRequest } = this.props;
+        const { sendToPageRequest } = this.props;
 
-        addToCartRequest(id);
+        sendToPageRequest(id);
     };
 
     render() {
-        const { productsShorts } = this.state;
-        const { amount } = this.props;
+        const { products } = this.state;
+        // const { amount } = this.props;
 
         return (
             <ProductList>
-                {productsShorts.map(product => (
-                    <li key={product.id}>
-                        <img src={product.image} alt={product.title} />
-                        <strong>{product.title}</strong>
-                        <span>{product.priceFormatted}</span>
-                        <button
-                            type="button"
-                            onClick={() => this.handleAddProduct(product.id)}
-                        >
-                            <div>
-                                <MdAddShoppingCart size={16} color="#fff" />{' '}
-                                {amount[product.id] || 0}
+                <>
+                    {products.map(product => (
+                        <li key={product.id}>
+                            <img
+                                onClick={() =>
+                                    this.handleAddProduct(product.id)
+                                }
+                                src={product.url}
+                                alt={product.name}
+                            />
+                            <div className="name-id">
+                                <strong>{product.name}</strong>
+                                <p>ID: {product.id}</p>
                             </div>
-                            <span>adicionar ao carrinho</span>
-                        </button>
-                    </li>
-                ))}
+                            {/* <strong>{product.name}</strong> */}
+                            <span>{product.priceFormatted}</span>
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    this.handleAddProduct(product.id)
+                                }
+                            >
+                                <span>Ver detalhes do produto</span>
+                            </button>
+                        </li>
+                    ))}
+                    <Link to="/shoesnew">
+                        <button className="btn">Cadastra produto</button>
+                    </Link>
+                </>
             </ProductList>
         );
     }
 }
 
 const mapStateToProps = state => ({
-    amount: state.cart.reduce((amount, product) => {
-        amount[product.id] = product.amount;
+    product: state.product.reduce(product => {
+        product.id = product;
 
-        return amount;
+        return product;
     }, {}),
 });
 
 const mapDispatchToProps = dispatch =>
-    bindActionCreators(CartActions, dispatch);
+    bindActionCreators(PageActions, dispatch);
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Shorts);
+)(Short);

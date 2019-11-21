@@ -21,11 +21,22 @@ export const ProductList = styled.ul`
             max-width: 250px;
         }
 
-        > strong {
+        .name-id {
             margin-top: 10px;
-            font-size: 14px;
-            line-height: 20px;
-            color: #333;
+            display: flex;
+            justify-content: space-between;
+
+            > strong {
+                font-size: 14px;
+                line-height: 20px;
+                color: #333;
+            }
+
+            p {
+                font-size: 13px;
+                padding-right: 25px;
+                color: #999;
+            }
         }
 
         > span {

@@ -24,18 +24,15 @@ class ShoesPageProducts extends Component {
         return (
             <Container>
                 {pageProduct.map(product => (
-                    <PageProductList key={product.id}>
+                    <PageProductList key={product}>
                         <div>
                             <h2>Galeria de fotos</h2>
                             <div>
-                                <img
-                                    src={product.image_product_id}
-                                    alt={product.product_name}
-                                />
+                                <img src={product.url} alt={product.name} />
                             </div>
                         </div>
                         <div className="sider-nav">
-                            <h3>{product.product_name}</h3>
+                            <h3>{product.name}</h3>
                             <ul>
                                 <li className="category">
                                     <span>{product.category}</span>
@@ -53,7 +50,7 @@ class ShoesPageProducts extends Component {
                                     <span>Tamanho: {product.size}</span>
                                 </li>
                                 <li className="code">
-                                    <span>{product.brand}</span>
+                                    <span>{product.id}</span>
                                 </li>
                                 <button className="favorite" type="button">
                                     Comprar
