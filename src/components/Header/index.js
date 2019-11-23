@@ -50,7 +50,7 @@ function Header({ cartSize }) {
             <NavBar>
                 <StylesHeader to="/promotion">
                     <li>
-                        <span>Promoções</span>
+                        <span>Novidades</span>
                     </li>
                 </StylesHeader>
                 <StylesHeader to="/shoes">
@@ -59,14 +59,14 @@ function Header({ cartSize }) {
                 <StylesHeader to="/tshirts">
                     <li>Camisetas</li>
                 </StylesHeader>
+                <StylesHeader to="/clock">
+                    <li>Regatas</li>
+                </StylesHeader>
                 <StylesHeader to="/shorts">
                     <li>Bermudas</li>
                 </StylesHeader>
                 <StylesHeader to="/pants">
                     <li>Calças</li>
-                </StylesHeader>
-                <StylesHeader to="/clock">
-                    <li>Chinelos</li>
                 </StylesHeader>
                 <StylesHeader to="/sockets">
                     <li>Cuecas e meias</li>
@@ -84,6 +84,15 @@ function Header({ cartSize }) {
                                 </li>
                                 <li>
                                     <a href="#">Bonés</a>
+                                </li>
+                                <li>
+                                    <a href="#">Carteiras</a>
+                                </li>
+                                <li>
+                                    <a href="#">Perfumes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Chinelos</a>
                                 </li>
                             </ul>
                         </div>
