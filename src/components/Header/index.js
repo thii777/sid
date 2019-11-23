@@ -48,30 +48,45 @@ function Header({ cartSize }) {
                 </div>
             </Menu>
             <NavBar>
+                <StylesHeader to="/promotion">
+                    <li>
+                        <span>Promoções</span>
+                    </li>
+                </StylesHeader>
                 <StylesHeader to="/shoes">
                     <li>Tenis</li>
                 </StylesHeader>
-                <StylesHeader to="/t-shirt">
+                <StylesHeader to="/tshirts">
                     <li>Camisetas</li>
                 </StylesHeader>
-                <StylesHeader to="/short">
-                    <li>Shorts</li>
+                <StylesHeader to="/shorts">
+                    <li>Bermudas</li>
                 </StylesHeader>
-                <StylesHeader to="/hat">
-                    <li>Bonés</li>
+                <StylesHeader to="/pants">
+                    <li>Calças</li>
                 </StylesHeader>
                 <StylesHeader to="/clock">
-                    <li>Relógios</li>
+                    <li>Chinelos</li>
                 </StylesHeader>
                 <StylesHeader to="/sockets">
                     <li>Cuecas e meias</li>
                 </StylesHeader>
                 <StylesHeader to="/accessories">
-                    <li>Acessórios</li>
-                </StylesHeader>
-                <StylesHeader to="/promotion">
                     <li>
-                        <span>Promoções</span>
+                        Acessórios
+                        <div className="sub-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">Relogios</a>
+                                </li>
+                                <li>
+                                    <a href="#">Oculos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bonés</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </StylesHeader>
             </NavBar>
